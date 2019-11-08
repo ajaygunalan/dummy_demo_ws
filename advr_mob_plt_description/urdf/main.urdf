@@ -1,0 +1,875 @@
+<robot name="COVER">
+  <link name="1_A">
+    <inertial>
+      <origin xyz="-0.00851236 -0.000890128 0.00760393" rpy="0 0 0"/>
+      <mass value="33073300.0"/>
+      <inertia ixx="27909.2" ixy="-734.642" ixz="2667.27" iyy="41786.8" iyz="-818.311" izz="27561.8"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/1_a_asm-binary.stl"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/1_a_asm-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="PAF1003500">
+    <inertial>
+      <origin xyz="0.0565801 -0.00585679742923 0.0144999582113" rpy="0 0 0"/>
+      <mass value="0.0178762"/>
+      <inertia ixx="1.68676e-07" ixy="-8.48721e-10" ixz="0.0" iyy="2.08482e-07" iyz="-1.75547e-10" izz="3.51666e-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.0579 -0.0058655590092 0.0129999547585" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003500_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1003500_color">
+        <color rgba="1.0 0.75 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0579 -0.0058655590092 0.0129999547585" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003500_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1_A--PAF1003500" type="fixed">
+    <origin xyz="0.0064 0.0129326 0.0275" rpy="1.04719714741 1.57079632679 0"/>
+    <axis xyz="1.0 0.0 1.11022302463e-16"/>
+    <parent link="1_A"/>
+    <child link="PAF1003500"/>
+    <!-- <limit effort="10000" lower="-10000" upper="10000" velocity="10000"/> -->
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1003600">
+    <inertial>
+      <origin xyz="-0.00116205216058 3.05791691174e-06 0.00150000896652" rpy="0 0 0"/>
+      <mass value="0.0185208"/>
+      <inertia ixx="1.7357e-07" ixy="-3.02838e-10" ixz="0.0" iyy="2.2409e-07" iyz="2.813e-10" izz="3.71201e-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003600_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1003600_color">
+        <color rgba="1.0 1.0 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003600_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1003500--PAF1003600" type="fixed">
+    <origin xyz="0.0592001 -0.0253344455309 0.00558093270826" rpy="0.610667950713 0.0166457985469 -0.0338769692659"/>
+    <parent link="PAF1003500"/>
+    <child link="PAF1003600"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1003700">
+    <inertial>
+      <origin xyz="-0.00155187581715 2.24507211835e-06 0.00110000076463" rpy="0 0 0"/>
+      <mass value="0.012343"/>
+      <inertia ixx="1.12951e-07" ixy="-1.54627e-10" ixz="0.0" iyy="1.32077e-07" iyz="1.73155e-11" izz="2.35416e-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003700_prt-binary.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003700_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1003600--PAF1003700" type="fixed">
+    <origin xyz="-0.010973824593 -0.0237500416593 0.0027448885293" rpy="2.89289229734e-07 0.0108849789956 2.60776268803e-07"/>
+    <parent link="PAF1003600"/>
+    <child link="PAF1003700"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004101">
+    <inertial>
+      <origin xyz="0.00337449004586 0.00346063716788 5.24457528966e-06" rpy="0 0 0"/>
+      <mass value="0.0285302"/>
+      <inertia ixx="6.75022e-07" ixy="-9.95271e-08" ixz="4.75049e-10" iyy="6.18247e-07" iyz="-2.22533e-10" izz="1.06625e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.00349994987012 -0.00602711473712 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004101_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004101_color">
+        <color rgba="0.75 1.0 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.00349994987012 -0.00602711473712 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004101_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1003700--PAF1004101" type="continuous">
+    <origin xyz="0.00409999738364 -0.00022020930368 -0.00208128063487" rpy="1.51319995882 0 -1.92248358723e-07"/>
+    <axis xyz="8.10671871038e-09 -0.999999773716 -2.05797691055e-08"/>
+    <parent link="PAF1003700"/>
+    <child link="PAF1004101"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004401">
+    <inertial>
+      <origin xyz="0 -0.000635181088434 0.0128666591798" rpy="0 0 0"/>
+      <mass value="0.0032677"/>
+      <inertia ixx="2.13703e-07" ixy="0.0" ixz="0.0" iyy="2.30372e-07" iyz="4.37112e-09" izz="8.40469e-08"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.00100001306321 -0.00275005057186" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004401_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004401_color">
+        <color rgba="1.0 0.75 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.00100001306321 -0.00275005057186" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004401_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004101--PAF1004401" type="continuous">
+    <origin xyz="0.00680006790744 0.00287288887084 0" rpy="-0.0650227536044 1.57079620993 -0.145307867413"/>
+    <axis xyz="0.999999678896 1.99802328055e-08 2.77878688046e-08"/>
+    <parent link="PAF1004101"/>
+    <child link="PAF1004401"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004700">
+    <inertial>
+      <origin xyz="0 -0.000509435776404 -0.00958875825158" rpy="0 0 0"/>
+      <mass value="0.0408908"/>
+      <inertia ixx="2.14528e-06" ixy="0.0" ixz="0.0" iyy="2.51952e-06" iyz="4.17804e-08" izz="8.9931e-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.00385999069066" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004700_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004700_color">
+        <color rgba="0.75 0.75 0.75 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.00385999069066" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004700_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004401--PAF1004700" type="continuous">
+    <origin xyz="0 0 0.0264999181582" rpy="-2.74016716134 0 0"/>
+    <axis xyz="-0.999999678896 -1.31398492954e-08 3.17077668288e-09"/>
+    <parent link="PAF1004401"/>
+    <child link="PAF1004700"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1005000">
+    <inertial>
+      <origin xyz="-0.00821744275544 0.166383805335 0.0478608998359" rpy="0 0 0"/>
+      <mass value="0.000756894"/>
+      <inertia ixx="1.78823e-08" ixy="-2.37701e-10" ixz="4.71138e-11" iyy="2.20045e-08" iyz="3.42609e-09" izz="1.21599e-08"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1005000_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1005000_color">
+        <color rgba="1.0 1.0 0.75 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1005000_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004700--PAF1005000" type="fixed">
+    <origin xyz="0.0102527127127 0.167912488786 0.0224838246708" rpy="-3.14159235185 0 -0.0121810646353"/>
+    <parent link="PAF1004700"/>
+    <child link="PAF1005000"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1003400">
+    <inertial>
+      <origin xyz="-0.0013145 8.67863770326e-06 0.00149996711302" rpy="0 0 0"/>
+      <mass value="0.0532202"/>
+      <inertia ixx="5.01885e-07" ixy="-2.49665e-09" ixz="0.0" iyy="6.217e-07" iyz="-5.68401e-11" izz="1.04769e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003400_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1003400_color">
+        <color rgba="0.25 0.5 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003400_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1_A--PAF1003400" type="fixed">
+    <origin xyz="0.0274589 0.0104263 -0.0272" rpy="1.04719714741 1.57079632679 0"/>
+    <parent link="1_A"/>
+    <child link="PAF1003400"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1003801">
+    <inertial>
+      <origin xyz="0.0038461 0.00438742504662 1.07098420216e-05" rpy="0 0 0"/>
+      <mass value="0.103446"/>
+      <inertia ixx="3.58836e-06" ixy="-5.21846e-07" ixz="4.01023e-09" iyy="2.78015e-06" iyz="2.538e-09" izz="4.97765e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0035 -0.00698064435777 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003801_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1003801_color">
+        <color rgba="1.0 0.75 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0035 -0.00698064435777 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003801_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1003400--PAF1003801" type="continuous">
+    <origin xyz="0.0041 -6.04044680737e-05 -0.00111717563536" rpy="1.58824971908 0 0"/>
+    <axis xyz="0.0 -1.00000044025 -1.13856436057e-07"/>
+    <parent link="PAF1003400"/>
+    <child link="PAF1003801"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004201">
+    <inertial>
+      <origin xyz="0 -0.00245137136553 0.015615295202" rpy="0 0 0"/>
+      <mass value="0.0118295"/>
+      <inertia ixx="9.70967e-07" ixy="0.0" ixz="0.0" iyy="1.04991e-06" iyz="2.74792e-08" izz="4.78951e-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.00299995632618 -0.00274996304264" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004201_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004201_color">
+        <color rgba="0.75 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.00299995632618 -0.00274996304264" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004201_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1003801--PAF1004201" type="continuous">
+    <origin xyz="0.0068 0.00361931686599 0" rpy="1.61820653951 1.57079602112 1.56584662577"/>
+    <axis xyz="1.00000044025 -1.91634382918e-07 8.52805280907e-09"/>
+    <parent link="PAF1003801"/>
+    <child link="PAF1004201"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004500">
+    <inertial>
+      <origin xyz="0 0.000378038466131 -0.0131533470868" rpy="0 0 0"/>
+      <mass value="0.190202"/>
+      <inertia ixx="1.5478e-05" ixy="0.0" ixz="0.0" iyy="1.78731e-05" iyz="8.8021e-07" izz="6.19301e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0.000999972692264 0.00385996745234" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004500_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004500_color">
+        <color rgba="1.0 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.000999972692264 0.00385996745234" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004500_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004201--PAF1004500" type="continuous">
+    <origin xyz="0 -0.00199998503613 0.0304999704087" rpy="-2.68780710036 2.39771271023e-07 0"/>
+    <axis xyz="-1.00000044025 -6.51257134887e-08 3.08022348461e-07"/>
+    <parent link="PAF1004201"/>
+    <child link="PAF1004500"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004800">
+    <inertial>
+      <origin xyz="-0.0099602563359 0.201702352802 0.0578870067878" rpy="0 0 0"/>
+      <mass value="0.00137117"/>
+      <inertia ixx="4.86452e-08" ixy="-6.1421e-10" ixz="1.24462e-10" iyy="5.9837e-08" iyz="9.17469e-09" izz="3.23765e-08"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004800_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004800_color">
+        <color rgba="0.75 1.0 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004800_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004500--PAF1004800" type="fixed">
+    <origin xyz="0.012634062015 0.204488748855 0.0245263019307" rpy="3.14159234484 0 -0.0131926098327"/>
+    <parent link="PAF1004500"/>
+    <child link="PAF1004800"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1002300">
+    <inertial>
+      <origin xyz="0.00253507204005 -0.00229951276095 0.00618126851302" rpy="0 0 0"/>
+      <mass value="48784.5"/>
+      <inertia ixx="5.95798" ixy="-0.401445" ixz="-0.35458" iyy="5.30297" iyz="-0.836671" izz="1.73284"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1002300_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1002300_color">
+        <color rgba="1.0 1.0 0.53 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1002300_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1_A--PAF1002300" type="fixed">
+    <origin xyz="0.0198447 0.0133727 0.00627751" rpy="-0.123389636399 0.0215437373873 0.976908191421"/>
+    <parent link="1_A"/>
+    <child link="PAF1002300"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1002500">
+    <inertial>
+      <origin xyz="-0.00275808533534 3.52640456902e-06 0.0111128431851" rpy="0 0 0"/>
+      <mass value="0.0602771"/>
+      <inertia ixx="2.98829e-06" ixy="-7.6075e-09" ixz="-2.00989e-06" iyy="6.42168e-06" iyz="6.01804e-09" izz="3.96698e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.0166000096495 0 0.0299756090659" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1002500_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1002500_color">
+        <color rgba="1.0 0.75 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0166000096495 0 0.0299756090659" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1002500_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1002300--PAF1002500" type="continuous">
+    <origin xyz="0.00300004969001 0.00200000069035 0.0150000109907" rpy="-2.49288797385 -1.57079573376 -0.0203859886655"/>
+    <axis xyz="-1.0000001741 4.77024647005e-07 2.31302308709e-07"/>
+    <parent link="PAF1002300"/>
+    <child link="PAF1002500"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="CUTOUT">
+    <inertial>
+      <origin xyz="-0.00427890232251 0.0428929456311 0.0212657717695" rpy="0 0 0"/>
+      <mass value="179552000.0"/>
+      <inertia ixx="32967.8" ixy="1307.73" ixz="2032.15" iyy="18273.7" iyz="-13519.7" izz="22160.5"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0.0168000118318 -0.00395002489474" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/cutout_asm-binary.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.0168000118318 -0.00395002489474" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/cutout_asm-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1002500--CUTOUT" type="continuous">
+    <origin xyz="0.00739996744688 0 0.0211499675285" rpy="1.51980062539 -1.31188481634e-07 -1.57079678869"/>
+    <axis xyz="1.00000033972 1.92759832931e-08 -1.39895338369e-08"/>
+    <parent link="PAF1002500"/>
+    <child link="CUTOUT"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1003901">
+    <inertial>
+      <origin xyz="0.0073481 0.0113598209544 8.01978724352e-06" rpy="0 0 0"/>
+      <mass value="0.100064"/>
+      <inertia ixx="3.47461e-06" ixy="-5.08058e-07" ixz="2.92797e-09" iyy="2.68917e-06" iyz="6.72829e-09" izz="4.81884e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003901_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1003901_color">
+        <color rgba="1.0 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1003901_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1_A--PAF1003901" type="fixed">
+    <origin xyz="0.00501112 0.00642236 -0.031" rpy="2.77507338117 1.57079632679 0"/>
+    <parent link="1_A"/>
+    <child link="PAF1003901"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004301">
+    <inertial>
+      <origin xyz="0 -0.00252752490586 0.0170952088421" rpy="0 0 0"/>
+      <mass value="0.332988"/>
+      <inertia ixx="3.11824e-05" ixy="0.0" ixz="0.0" iyy="3.3177e-05" iyz="7.74984e-07" izz="1.34653e-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.00299999735365 -0.00274996097933" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004301_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004301_color">
+        <color rgba="0.75 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.00299999735365 -0.00274996097933" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004301_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1003901--PAF1004301" type="continuous">
+    <origin xyz="0.0103 0.0105999975515 0" rpy="2.42173061657 1.57079629976 2.36937073268"/>
+    <axis xyz="0.999999619912 -8.81751169857e-08 2.40175518709e-08"/>
+    <parent link="PAF1003901"/>
+    <child link="PAF1004301"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004600">
+    <inertial>
+      <origin xyz="0 0.000411225942409 -0.0151843696958" rpy="0 0 0"/>
+      <mass value="0.221705"/>
+      <inertia ixx="2.18438e-05" ixy="0.0" ixz="0.0" iyy="2.42753e-05" iyz="1.21878e-06" izz="7.13719e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0.00100000491117 0.00386000785583" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004600_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004600_color">
+        <color rgba="1.0 0.75 0.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.00100000491117 0.00386000785583" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004600_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004301--PAF1004600" type="continuous">
+    <origin xyz="0 -0.0019999996639 0.0334999824782" rpy="-2.56563394261 2.42625558312e-07 0"/>
+    <axis xyz="-0.999999619912 1.24171011417e-07 2.37297750894e-07"/>
+    <parent link="PAF1004301"/>
+    <child link="PAF1004600"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004900">
+    <inertial>
+      <origin xyz="-0.00995657784312 0.202022793011 0.0571031415645" rpy="0 0 0"/>
+      <mass value="0.00168109"/>
+      <inertia ixx="7.54518e-08" ixy="-7.0908e-10" ixz="1.37313e-10" iyy="8.70907e-08" iyz="1.55857e-08" izz="4.02854e-08"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004900_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004900_color">
+        <color rgba="1.0 0.0 0.47 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004900_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004600--PAF1004900" type="fixed">
+    <origin xyz="0.0126341501855 0.204934730196 0.0190362808699" rpy="3.14159261659 0 -0.0131924863988"/>
+    <parent link="PAF1004600"/>
+    <child link="PAF1004900"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF1004001">
+    <inertial>
+      <origin xyz="0.00736466477151 0.0113537508232 1.12030963288e-05" rpy="0 0 0"/>
+      <mass value="0.0996106"/>
+      <inertia ixx="3.472e-06" ixy="-5.10258e-07" ixz="4.10239e-09" iyy="2.67736e-06" iyz="-7.64805e-09" izz="4.81157e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004001_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF1004001_color">
+        <color rgba="0.75 0.75 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004001_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="1_A--PAF1004001" type="fixed">
+    <origin xyz="-0.0144769 0.00364492 -0.0322562" rpy="-0.0902211351452 1.53305216713 -3.07481850054"/>
+    <parent link="1_A"/>
+    <child link="PAF1004001"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF10042010">
+    <inertial>
+      <origin xyz="0 -0.00245135170565 0.0156153095918" rpy="0 0 0"/>
+      <mass value="0.0118295"/>
+      <inertia ixx="9.70967e-07" ixy="0.0" ixz="0.0" iyy="1.04991e-06" iyz="2.74792e-08" izz="4.78951e-07"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.00299999694327 -0.00275003349694" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004201_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF10042010_color">
+        <color rgba="0.75 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.00299999694327 -0.00275003349694" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004201_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004001--PAF1004201" type="continuous">
+    <origin xyz="0.0102999984262 0.0105999886236 0" rpy="-1.08341642813 1.57079591639 -1.13577614629"/>
+    <axis xyz="1.00000024783 2.36992810717e-07 -1.72229714934e-08"/>
+    <parent link="PAF1004001"/>
+    <child link="PAF10042010"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF10045000">
+    <inertial>
+      <origin xyz="0 0.000378035977283 -0.013153310539" rpy="0 0 0"/>
+      <mass value="0.190202"/>
+      <inertia ixx="1.5478e-05" ixy="0.0" ixz="0.0" iyy="1.78731e-05" iyz="8.8021e-07" izz="6.19301e-06"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0.00100000320798 0.00385999267293" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004500_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF10045000_color">
+        <color rgba="1.0 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0.00100000320798 0.00385999267293" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004500_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004201--PAF10045000" type="continuous">
+    <origin xyz="0 -0.00199998450996 0.0305000035141" rpy="-2.68780704307 0 3.87885381272e-07"/>
+    <axis xyz="-1.00000024783 -1.20997757813e-07 9.61299631563e-08"/>
+    <parent link="PAF10042010"/>
+    <child link="PAF10045000"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="PAF10048000">
+    <inertial>
+      <origin xyz="-0.00996054373334 0.201702796943 0.0578861506305" rpy="0 0 0"/>
+      <mass value="0.00137117"/>
+      <inertia ixx="4.86452e-08" ixy="-6.1421e-10" ixz="1.24462e-10" iyy="5.9837e-08" iyz="9.17469e-09" izz="3.23765e-08"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004800_prt-binary.stl"/>
+      </geometry>
+      <material name="PAF10048000_color">
+        <color rgba="0.75 1.0 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/paf1004800_prt-binary.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="PAF1004500--PAF10048000" type="fixed">
+    <origin xyz="0.0126341894392 0.204489365538 0.0245259411149" rpy="-3.14159241184 0 -0.0131920364392"/>
+    <parent link="PAF10045000"/>
+    <child link="PAF10048000"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <gazebo reference="PAF1003500">
+    <visual>
+      <material>
+        <ambient>0.9 0.675 0.45 1.0</ambient>
+        <diffuse>0.9 0.675 0.45 1.0</diffuse>
+        <specular>0.8 0.6 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1003600">
+    <visual>
+      <material>
+        <ambient>0.9 0.9 0.45 1.0</ambient>
+        <diffuse>0.9 0.9 0.45 1.0</diffuse>
+        <specular>0.8 0.8 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004101">
+    <visual>
+      <material>
+        <ambient>0.675 0.9 0.45 1.0</ambient>
+        <diffuse>0.675 0.9 0.45 1.0</diffuse>
+        <specular>0.6 0.8 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004401">
+    <visual>
+      <material>
+        <ambient>0.9 0.675 0.9 1.0</ambient>
+        <diffuse>0.9 0.675 0.9 1.0</diffuse>
+        <specular>0.8 0.6 0.8 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004700">
+    <visual>
+      <material>
+        <ambient>0.675 0.675 0.675 1.0</ambient>
+        <diffuse>0.675 0.675 0.675 1.0</diffuse>
+        <specular>0.6 0.6 0.6 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1005000">
+    <visual>
+      <material>
+        <ambient>0.9 0.9 0.675 1.0</ambient>
+        <diffuse>0.9 0.9 0.675 1.0</diffuse>
+        <specular>0.8 0.8 0.6 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1003400">
+    <visual>
+      <material>
+        <ambient>0.225 0.45 0.0 1.0</ambient>
+        <diffuse>0.225 0.45 0.0 1.0</diffuse>
+        <specular>0.2 0.4 0.0 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1003801">
+    <visual>
+      <material>
+        <ambient>0.9 0.675 0.45 1.0</ambient>
+        <diffuse>0.9 0.675 0.45 1.0</diffuse>
+        <specular>0.8 0.6 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004201">
+    <visual>
+      <material>
+        <ambient>0.675 0.9 0.9 1.0</ambient>
+        <diffuse>0.675 0.9 0.9 1.0</diffuse>
+        <specular>0.6 0.8 0.8 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004500">
+    <visual>
+      <material>
+        <ambient>0.9 0.45 0.45 1.0</ambient>
+        <diffuse>0.9 0.45 0.45 1.0</diffuse>
+        <specular>0.8 0.4 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004800">
+    <visual>
+      <material>
+        <ambient>0.675 0.9 0.45 1.0</ambient>
+        <diffuse>0.675 0.9 0.45 1.0</diffuse>
+        <specular>0.6 0.8 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1002300">
+    <visual>
+      <material>
+        <ambient>0.55 0.55 0.2915 1.0</ambient>
+        <diffuse>1.0 1.0 0.53 1.0</diffuse>
+        <specular>0.8 0.8 0.424 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1002500">
+    <visual>
+      <material>
+        <ambient>0.9 0.675 0.0 1.0</ambient>
+        <diffuse>0.9 0.675 0.0 1.0</diffuse>
+        <specular>0.8 0.6 0.0 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1003901">
+    <visual>
+      <material>
+        <ambient>0.9 0.45 0.45 1.0</ambient>
+        <diffuse>0.9 0.45 0.45 1.0</diffuse>
+        <specular>0.8 0.4 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004301">
+    <visual>
+      <material>
+        <ambient>0.675 0.45 0.45 1.0</ambient>
+        <diffuse>0.675 0.45 0.45 1.0</diffuse>
+        <specular>0.6 0.4 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004600">
+    <visual>
+      <material>
+        <ambient>0.9 0.675 0.0 1.0</ambient>
+        <diffuse>0.9 0.675 0.0 1.0</diffuse>
+        <specular>0.8 0.6 0.0 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004900">
+    <visual>
+      <material>
+        <ambient>0.9 0.0 0.423 1.0</ambient>
+        <diffuse>0.9 0.0 0.423 1.0</diffuse>
+        <specular>0.8 0.0 0.376 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF1004001">
+    <visual>
+      <material>
+        <ambient>0.675 0.675 0.9 1.0</ambient>
+        <diffuse>0.675 0.675 0.9 1.0</diffuse>
+        <specular>0.6 0.6 0.8 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF10042010">
+    <visual>
+      <material>
+        <ambient>0.675 0.9 0.9 1.0</ambient>
+        <diffuse>0.675 0.9 0.9 1.0</diffuse>
+        <specular>0.6 0.8 0.8 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF10045000">
+    <visual>
+      <material>
+        <ambient>0.9 0.45 0.45 1.0</ambient>
+        <diffuse>0.9 0.45 0.45 1.0</diffuse>
+        <specular>0.8 0.4 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo reference="PAF10048000">
+    <visual>
+      <material>
+        <ambient>0.675 0.9 0.45 1.0</ambient>
+        <diffuse>0.675 0.9 0.45 1.0</diffuse>
+        <specular>0.6 0.8 0.4 1.0</specular>
+      </material>
+    </visual>
+  </gazebo>
+  <gazebo>
+    <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+  </gazebo>
+</robot>
+

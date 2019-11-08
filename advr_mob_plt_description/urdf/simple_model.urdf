@@ -1,0 +1,229 @@
+<robot name="MAIN">
+
+<link name="footprint" />
+
+<joint name="base_joint" type="fixed">
+  <parent link="footprint"/>
+  <child link="CHASSIS_SUB"/>
+</joint>
+
+<link name="CHASSIS_SUB">
+    <inertial>
+      <origin xyz="6.223 0 0.635" rpy="0 0 0"/>
+      <mass value="4252430.0"/>
+      <inertia ixx="14860600.0" ixy="0.0" ixz="0.0" iyy="129173000.0" iyz="0.0" izz="142890000.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/chassis_sub_asm.stl"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/chassis_sub_asm.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="WHEEL_SUB-2">
+    <inertial>
+      <origin xyz="-0.00404886860109 8.25423 -0.00255636148678" rpy="0 0 0"/>
+      <mass value="274974.0"/>
+      <inertia ixx="211670.0" ixy="71.8004" ixz="630.96" iyy="349311.0" iyz="45.2175" izz="211702.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 7.62 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 7.62 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="CHASSIS_SUB_WHEEL_SUB_2" type="continuous">
+    <origin xyz="10.9855 -3.175 0.635" rpy="0 0.157649211716 0"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="CHASSIS_SUB"/>
+    <child link="WHEEL_SUB-2"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="WHEEL_SUB-1">
+    <inertial>
+      <origin xyz="-0.00406105508783 8.25423 -0.00255672281907" rpy="0 0 0"/>
+      <mass value="274974.0"/>
+      <inertia ixx="211670.0" ixy="71.8004" ixz="630.96" iyy="349311.0" iyz="45.2175" izz="211702.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 7.62 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 7.62 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="CHASSIS_SUB_WHEEL_SUB_1" type="continuous">
+    <origin xyz="1.4605 3.175 0.635" rpy="0 0.731481857872 3.14159265359"/>
+    <axis xyz="0.0 1.0 0.0"/>
+    <parent link="CHASSIS_SUB"/>
+    <child link="WHEEL_SUB-1"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="WHEEL_SUB-3">
+    <inertial>
+      <origin xyz="-0.00406250026746 1.90423 -0.00255957175654" rpy="0 0 0"/>
+      <mass value="274974.0"/>
+      <inertia ixx="211670.0" ixy="71.8004" ixz="630.96" iyy="349311.0" iyz="45.2175" izz="211702.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 1.27 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 1.27 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="CHASSIS_SUB_WHEEL_SUB_3" type="continuous">
+    <origin xyz="1.4605 3.175 0.635" rpy="0 -1.30226592388 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="CHASSIS_SUB"/>
+    <child link="WHEEL_SUB-3"/>
+    <dynamics damping="0.1"/>
+  </joint>
+  <link name="WHEEL_SUB">
+    <inertial>
+      <origin xyz="-0.00406718663107 1.90423 -0.00256243515197" rpy="0 0 0"/>
+      <mass value="274974.0"/>
+      <inertia ixx="211670.0" ixy="71.8004" ixz="630.96" iyy="349311.0" iyz="45.2175" izz="211702.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 1.27 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 1.27 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://advr_mob_plt_description/urdf/meshes/wheel_sub_asm.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="CHASSIS_SUB_WHEEL_SUB" type="continuous">
+    <origin xyz="10.9855 -3.175 0.635" rpy="3.14159265359 -0.773676769918 0"/>
+    <axis xyz="0.0 -1.0 0.0"/>
+    <parent link="CHASSIS_SUB"/>
+    <child link="WHEEL_SUB"/>
+    <dynamics damping="0.1"/>
+  </joint>
+ <!--                GAZEBO RELATED PART                             -->
+ 
+  <!-- ROS Control plugin for Gazebo -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace> 
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+ 
+<!-- <gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+    <rosDebugLevel>Debug</rosDebugLevel>
+    <publishWheelTF>false</publishWheelTF>
+    <robotNamespace>/</robotNamespace>
+    <publishTf>1</publishTf>
+    <publishWheelJointState>false</publishWheelJointSt>
+    
+    <alwaysOn>true</alwaysOn>
+    <updateRate>100.0</updateRate>
+    
+    <leftJoint>front_left_wheel_joint</leftJoint>
+    <rightJoint>front_right_wheel_joint</rightJoint>
+    
+    <wheelSeparation>10.16</wheelSeparation>
+    <wheelDiameter>3.175</wheelDiameter>
+    
+    <broadcastTF>1</broadcastTF>
+    <wheelTorque>30</wheelTorque>
+    <wheelAcceleration>1.8</wheelAcceleration>
+    <commandTopic>cmd_vel</commandTopic>
+    <odometryFrame>odom</odometryFrame>
+    <odometryTopic>odom</odometryTopic>
+    
+    <robotBaseFrame>footprint</robotBaseFrame>
+  </plugin>
+</gazebo> --> 
+ 
+  <!-- transmission -->
+  <transmission name="CHASSIS_SUB_WHEEL_SUB_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor2">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="CHASSIS_SUB_WHEEL_SUB_2">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="CHASSIS_SUB_WHEEL_SUB_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor1">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="CHASSIS_SUB_WHEEL_SUB_1">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="CHASSIS_SUB_WHEEL_SUB_3">
+    <type>transmission_interface/_mpleTransmission</type>
+    <actuator name="motor3">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="CHASSIS_SUB_WHEEL_SUB_3">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="CHASSIS_SUB_WHEEL_SUB">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="CHASSIS_SUB_WHEEL_SUB">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+</robot>
