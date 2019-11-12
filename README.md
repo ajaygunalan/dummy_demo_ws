@@ -34,6 +34,13 @@ or use `urdf_to_graphiz <urdf file>` for pdf containing the tree structure like 
 roslaunch advr_mob_plt_description advr_mob_plt_display.launch
 
 ```
+
+To check the tf tree
+
+```
+rosrun rqt_tf_tree rqt_tf_tree
+```
+
 **For visualization in Gazebo**
 
 ```

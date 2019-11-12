@@ -1,4 +1,12 @@
 <robot name="COVER">
+
+<link name="footprint" />
+
+<joint name="base_joint" type="fixed">
+  <parent link="footprint"/>
+  <child link="1_A"/>
+</joint>
+
   <link name="1_A">
     <inertial>
       <origin xyz="-0.00851236 -0.000890128 0.00760393" rpy="0 0 0"/>
@@ -43,6 +51,7 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="1_A--PAF1003500" type="fixed">
     <origin xyz="0.0064 0.0129326 0.0275" rpy="1.04719714741 1.57079632679 0"/>
     <axis xyz="1.0 0.0 1.11022302463e-16"/>
@@ -51,6 +60,7 @@
     <!-- <limit effort="10000" lower="-10000" upper="10000" velocity="10000"/> -->
     <dynamics damping="0.1"/>
   </joint>
+  
   <link name="PAF1003600">
     <inertial>
       <origin xyz="-0.00116205216058 3.05791691174e-06 0.00150000896652" rpy="0 0 0"/>
