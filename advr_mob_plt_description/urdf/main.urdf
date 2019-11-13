@@ -83,12 +83,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1003500--PAF1003600" type="fixed">
-    <origin xyz="0.0592001 -0.0253344455309 0.00558093270826" rpy="0.610667950713 0.0166457985469 -0.0338769692659"/>
-    <parent link="PAF1003500"/>
+
+  <joint name="1_A--PAF1003600" type="fixed">
+    <origin xyz="0.0064 0.0129326 0.0275" rpy="1.04719714741 1.57079632679 0"/>
+    <axis xyz="1.0 0.0 1.11022302463e-16"/>
+    <parent link="1_A"/>
     <child link="PAF1003600"/>
+    <!-- <limit effort="10000" lower="-10000" upper="10000" velocity="10000"/> -->
     <dynamics damping="0.1"/>
   </joint>
+
   <link name="PAF1003700">
     <inertial>
       <origin xyz="-0.00155187581715 2.24507211835e-06 0.00110000076463" rpy="0 0 0"/>
@@ -111,10 +115,10 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1003600--PAF1003700" type="fixed">
+  <joint name="PAF1003600--PAF1004001" type="fixed">
     <origin xyz="-0.010973824593 -0.0237500416593 0.0027448885293" rpy="2.89289229734e-07 0.0108849789956 2.60776268803e-07"/>
     <parent link="PAF1003600"/>
-    <child link="PAF1003700"/>
+    <child link="PAF1004001"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="PAF1004101">
@@ -139,7 +143,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1003700--PAF1004101" type="continuous">
+
+  <joint name="1_A--PAF1003700" type="fixed">
+    <origin xyz="0.00409999738364 -0.00022020930368 -0.00208128063487" rpy="1.51319995882 0 -1.92248358723e-07"/>
+    <axis xyz="8.10671871038e-09 -0.999999773716 -2.05797691055e-08"/>
+    <parent link="1_A"/>
+    <child link="PAF1003700"/>
+    <dynamics damping="0.1"/>
+  </joint>
+
+  <joint name="PAF1003700--PAF1004101" type="fixed">
     <origin xyz="0.00409999738364 -0.00022020930368 -0.00208128063487" rpy="1.51319995882 0 -1.92248358723e-07"/>
     <axis xyz="8.10671871038e-09 -0.999999773716 -2.05797691055e-08"/>
     <parent link="PAF1003700"/>
@@ -168,11 +181,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1004101--PAF1004401" type="continuous">
+  <joint name="PAF1004101--PAF1004401" type="revolute">
     <origin xyz="0.00680006790744 0.00287288887084 0" rpy="-0.0650227536044 1.57079620993 -0.145307867413"/>
     <axis xyz="0.999999678896 1.99802328055e-08 2.77878688046e-08"/>
     <parent link="PAF1004101"/>
     <child link="PAF1004401"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="PAF1004700">
@@ -197,11 +211,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1004401--PAF1004700" type="continuous">
+  <joint name="PAF1004401--PAF1004700" type="revolute">
     <origin xyz="0 0 0.0264999181582" rpy="-2.74016716134 0 0"/>
     <axis xyz="-0.999999678896 -1.31398492954e-08 3.17077668288e-09"/>
     <parent link="PAF1004401"/>
     <child link="PAF1004700"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="PAF1005000">
@@ -282,7 +297,7 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1003400--PAF1003801" type="continuous">
+  <joint name="PAF1003400--PAF1003801" type="fixed">
     <origin xyz="0.0041 -6.04044680737e-05 -0.00111717563536" rpy="1.58824971908 0 0"/>
     <axis xyz="0.0 -1.00000044025 -1.13856436057e-07"/>
     <parent link="PAF1003400"/>
@@ -311,11 +326,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1003801--PAF1004201" type="continuous">
+  <joint name="PAF1003801--PAF1004201" type="revolute">
     <origin xyz="0.0068 0.00361931686599 0" rpy="1.61820653951 1.57079602112 1.56584662577"/>
     <axis xyz="1.00000044025 -1.91634382918e-07 8.52805280907e-09"/>
     <parent link="PAF1003801"/>
     <child link="PAF1004201"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="PAF1004500">
@@ -340,11 +356,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1004201--PAF1004500" type="continuous">
+  <joint name="PAF1004201--PAF1004500" type="revolute">
     <origin xyz="0 -0.00199998503613 0.0304999704087" rpy="-2.68780710036 2.39771271023e-07 0"/>
     <axis xyz="-1.00000044025 -6.51257134887e-08 3.08022348461e-07"/>
     <parent link="PAF1004201"/>
     <child link="PAF1004500"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="PAF1004800">
@@ -425,11 +442,12 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1002300--PAF1002500" type="continuous">
+  <joint name="PAF1002300--PAF1002500" type="revolute">
     <origin xyz="0.00300004969001 0.00200000069035 0.0150000109907" rpy="-2.49288797385 -1.57079573376 -0.0203859886655"/>
     <axis xyz="-1.0000001741 4.77024647005e-07 2.31302308709e-07"/>
     <parent link="PAF1002300"/>
     <child link="PAF1002500"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
   <link name="CUTOUT">
@@ -454,13 +472,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1002500--CUTOUT" type="continuous">
+
+  <joint name="PAF1002500--CUTOUT" type="revolute">
     <origin xyz="0.00739996744688 0 0.0211499675285" rpy="1.51980062539 -1.31188481634e-07 -1.57079678869"/>
     <axis xyz="1.00000033972 1.92759832931e-08 -1.39895338369e-08"/>
     <parent link="PAF1002500"/>
     <child link="CUTOUT"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
+
   <link name="PAF1003901">
     <inertial>
       <origin xyz="0.0073481 0.0113598209544 8.01978724352e-06" rpy="0 0 0"/>
@@ -483,9 +504,9 @@
       </geometry>
     </collision>
   </link>
-  <joint name="1_A--PAF1003901" type="fixed">
+  <joint name="PAF1003500--PAF1003901" type="fixed">
     <origin xyz="0.00501112 0.00642236 -0.031" rpy="2.77507338117 1.57079632679 0"/>
-    <parent link="1_A"/>
+    <parent link="PAF1003500"/>
     <child link="PAF1003901"/>
     <dynamics damping="0.1"/>
   </joint>
@@ -511,13 +532,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1003901--PAF1004301" type="continuous">
+
+  <joint name="PAF1003901--PAF1004301" type="revolute">
     <origin xyz="0.0103 0.0105999975515 0" rpy="2.42173061657 1.57079629976 2.36937073268"/>
     <axis xyz="0.999999619912 -8.81751169857e-08 2.40175518709e-08"/>
     <parent link="PAF1003901"/>
     <child link="PAF1004301"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
+
   <link name="PAF1004600">
     <inertial>
       <origin xyz="0 0.000411225942409 -0.0151843696958" rpy="0 0 0"/>
@@ -540,13 +564,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1004301--PAF1004600" type="continuous">
+
+  <joint name="PAF1004301--PAF1004600" type="revolute">
     <origin xyz="0 -0.0019999996639 0.0334999824782" rpy="-2.56563394261 2.42625558312e-07 0"/>
     <axis xyz="-0.999999619912 1.24171011417e-07 2.37297750894e-07"/>
     <parent link="PAF1004301"/>
     <child link="PAF1004600"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
+
   <link name="PAF1004900">
     <inertial>
       <origin xyz="-0.00995657784312 0.202022793011 0.0571031415645" rpy="0 0 0"/>
@@ -569,12 +596,14 @@
       </geometry>
     </collision>
   </link>
+
   <joint name="PAF1004600--PAF1004900" type="fixed">
     <origin xyz="0.0126341501855 0.204934730196 0.0190362808699" rpy="3.14159261659 0 -0.0131924863988"/>
     <parent link="PAF1004600"/>
     <child link="PAF1004900"/>
     <dynamics damping="0.1"/>
   </joint>
+  
   <link name="PAF1004001">
     <inertial>
       <origin xyz="0.00736466477151 0.0113537508232 1.12030963288e-05" rpy="0 0 0"/>
@@ -597,12 +626,7 @@
       </geometry>
     </collision>
   </link>
-  <joint name="1_A--PAF1004001" type="fixed">
-    <origin xyz="-0.0144769 0.00364492 -0.0322562" rpy="-0.0902211351452 1.53305216713 -3.07481850054"/>
-    <parent link="1_A"/>
-    <child link="PAF1004001"/>
-    <dynamics damping="0.1"/>
-  </joint>
+ 
   <link name="PAF10042010">
     <inertial>
       <origin xyz="0 -0.00245135170565 0.0156153095918" rpy="0 0 0"/>
@@ -625,13 +649,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1004001--PAF1004201" type="continuous">
+
+  <joint name="PAF1004001--PAF1004201" type="revolute">
     <origin xyz="0.0102999984262 0.0105999886236 0" rpy="-1.08341642813 1.57079591639 -1.13577614629"/>
     <axis xyz="1.00000024783 2.36992810717e-07 -1.72229714934e-08"/>
     <parent link="PAF1004001"/>
     <child link="PAF10042010"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
+
   <link name="PAF10045000">
     <inertial>
       <origin xyz="0 0.000378035977283 -0.013153310539" rpy="0 0 0"/>
@@ -654,13 +681,16 @@
       </geometry>
     </collision>
   </link>
-  <joint name="PAF1004201--PAF10045000" type="continuous">
+
+  <joint name="PAF1004201--PAF10045000" type="revolute">
     <origin xyz="0 -0.00199998450996 0.0305000035141" rpy="-2.68780704307 0 3.87885381272e-07"/>
     <axis xyz="-1.00000024783 -1.20997757813e-07 9.61299631563e-08"/>
     <parent link="PAF10042010"/>
     <child link="PAF10045000"/>
+    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
+
   <link name="PAF10048000">
     <inertial>
       <origin xyz="-0.00996054373334 0.201702796943 0.0578861506305" rpy="0 0 0"/>
