@@ -719,13 +719,13 @@
       </geometry>
     </collision>
   </link>
-<!--
+
   <joint name="PAF1002500__CUTOUT" type="revolute">
-    <origin xyz="0.00739996744688 0 0.0211499675285" rpy="1.51980062539 -1.31188481634e-07 -1.57079678869"/>
+    <origin xyz="16 16 24" rpy=" 0 0 -0.785398"/>
     <axis xyz="1.00000033972 1.92759832931e-08 -1.39895338369e-08"/>
     <parent link="PAF1002500"/>
     <child link="CUTOUT"/>
-    <limit effort="300" lower="-2.61799387799" upper="0.705631162427" velocity="1"/>
+    <limit effort="300" lower="-0.72" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
 
@@ -736,7 +736,7 @@
       <inertia ixx="32967.8" ixy="1307.73" ixz="2032.15" iyy="18273.7" iyz="-13519.7" izz="22160.5"/>
     </inertial>
     <visual>
-      <origin xyz="0 0.0168000118318 -0.00395002489474" rpy="0 0 0"/>
+      <origin xyz="0 17 4" rpy="0 3.14159 0"/>
       <geometry>
         <mesh filename="package://advr_mob_plt_description/urdf/meshes/cutout_asm-binary.stl"/>
       </geometry>
@@ -751,7 +751,5 @@
       </geometry>
     </collision>
   </link>
-
--->
 
   </robot>
