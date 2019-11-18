@@ -659,14 +659,14 @@
 
 <!-- Thumb -->
 
-  <joint name="1_A--PAF1002300" type="fixed">
+  <joint name="palm_thumb_mount_joint" type="fixed">
     <origin xyz="20 12 5" rpy="-0.123389636399 0.0215437373873 0.976908191421"/>
     <parent link="1_A"/>
-    <child link="PAF1002300"/>
+    <child link="thumb_mount_link"/>
     <dynamics damping="0.1"/>
   </joint>
 
-  <link name="PAF1002300">
+  <link name="thumb_mount_link">
     <inertial>
       <origin xyz="0.00253507204005 -0.00229951276095 0.00618126851302" rpy="0 0 0"/>
       <mass value="48784.5"/>
@@ -689,15 +689,15 @@
     </collision>
   </link>
 
- <joint name="PAF1002300__PAF1002500" type="fixed">
+ <joint name="thumb_mount_medial_joint" type="fixed">
     <origin xyz="3 2.5 0" rpy="0 0 0"/>
     <axis xyz="-1.0000001741 4.77024647005e-07 2.31302308709e-07"/>
-    <parent link="PAF1002300"/>
-    <child link="PAF1002500"/>
+    <parent link="thumb_mount_link"/>
+    <child link="thumb_medial_link"/>
     <dynamics damping="0.1"/>
   </joint>
 
-  <link name="PAF1002500">
+  <link name="thumb_medial_link">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0.0602771"/>
@@ -720,16 +720,16 @@
     </collision>
   </link>
 
-  <joint name="PAF1002500__CUTOUT" type="revolute">
+  <joint name="thumb_medial_distal_joint" type="revolute">
     <origin xyz="16 16 24" rpy=" 0 0 -0.785398"/>
     <axis xyz="1.00000033972 1.92759832931e-08 -1.39895338369e-08"/>
-    <parent link="PAF1002500"/>
-    <child link="CUTOUT"/>
+    <parent link="thumb_medial_link"/>
+    <child link="thumb_distal_link"/>
     <limit effort="300" lower="-0.72" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
 
-  <link name="CUTOUT">
+  <link name="thumb_distal_link">
     <inertial>
       <origin xyz="-0.00427890232251 0.0428929456311 0.0212657717695" rpy="0 0 0"/>
       <mass value="179552000.0"/>
