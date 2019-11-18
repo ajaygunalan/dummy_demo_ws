@@ -32,7 +32,7 @@
 
 <!--INDEX Finger-->
   <joint name="palm_index_mount_joint" type="fixed">
-    <origin xyz="29 10 -28" rpy="1.57 1.57 0.436332"/>
+    <origin xyz="29 10 -28" rpy="1.57 1.57 -0.001"/>
     <parent link="1_A"/>
     <child link="index_mount_1_link"/>
     <dynamics damping="0.1"/>
@@ -97,7 +97,7 @@
     <axis xyz="1.00000044025 -1.91634382918e-07 8.52805280907e-09"/>
     <parent link="index_mount_2_link"/>
     <child link="index_proximal_link"/>
-    <limit effort="300" lower="-0.61" upper="0.705631162427" velocity="1"/>
+    <limit effort="300" lower="0.14" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
 
@@ -189,7 +189,7 @@
 <!-- Middle Finger -->
 
   <joint name="palm_middle_mount_joint" type="fixed">
-    <origin xyz="10 -3 -32" rpy="1.57 1.57 0.261799"/>    
+    <origin xyz="10 -3 -32" rpy="1.57 1.57 0"/>    
     <axis xyz="1.0 0.0 1.11022302463e-16"/>
     <parent link="1_A"/>
     <child link="middle_mount_1_link"/>
@@ -254,7 +254,7 @@
     <axis xyz="0.999999619912 -8.81751169857e-08 2.40175518709e-08"/>
     <parent link="middle_mount_2_link"/>
     <child link="middle_proximal_link"/>
-    <limit effort="300" lower="-0.66" upper="0.705631162427" velocity="1"/>
+    <limit effort="300" lower="0.04" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
 
@@ -346,7 +346,7 @@
 <!-- Ring Finger -->
 
   <joint name="palm_ring_mount_joint" type="fixed">
-    <origin xyz="-12 -5 -30" rpy="1.57 1.57 -0.174533"/>
+    <origin xyz="-12 -5 -30" rpy="1.57 1.57 0"/>
     <parent link="1_A"/>
     <child link="ring_mount_1_link"/>
     <dynamics damping="0.1"/>
@@ -410,7 +410,7 @@
     <axis xyz="1.00000024783 2.36992810717e-07 -1.72229714934e-08"/>
     <parent link="ring_mount_2_link"/>
     <child link="ring_proximal_link"/>
-    <limit effort="300" lower="-0.42" upper="0.705631162427" velocity="1"/>
+    <limit effort="300" lower="0.14" upper="0.705631162427" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
 
@@ -442,7 +442,7 @@
     <axis xyz="-1.00000024783 -1.20997757813e-07 9.61299631563e-08"/>
     <parent link="ring_proximal_link"/>
     <child link="ring_medial_link"/>
-    <limit effort="300" lower="-0.61" upper="0.705631162427" velocity="1"/>
+    <limit effort="300" lower="-0.61" upper="0.13" velocity="1"/>
     <dynamics damping="0.1"/>
   </joint>
 
